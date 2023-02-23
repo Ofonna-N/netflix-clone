@@ -1,0 +1,11 @@
+@use "/src/sass/abstracts/variables" as v;
+
+.badge {
+  padding: 0.48rem 0.8rem;
+  border-radius: 30px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  &--primary {
+    background-color: v.$primary-color;
+  }
+}

@@ -1,0 +1,67 @@
+// @use "../../button/button.module.scss" as *;
+// @use "sass:selector";
+.plans-banner {
+  padding: 1.7rem 1rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  align-items: center;
+  // gap: 0.5rem;
+
+  &__info {
+    color: black;
+    font-size: 1.4rem;
+    justify-self: flex-start;
+    font-weight: lighter;
+    padding-left: 0.48rem;
+    // width: auto;
+    // padding: 0;
+    // display: flex;
+    // justify-content: start;
+    // flex-wrap: wrap;
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+
+  & .badge {
+    margin: 0.8rem 1.1rem;
+  }
+}
+@media (min-width: 550px) {
+  .plans-banner {
+    padding: 0.7rem 0;
+
+    &__info {
+      font-size: 1.76rem;
+    }
+
+    & .btn {
+      font-size: 1.6rem;
+    }
+
+    & .badge {
+      font-size: 1.26rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .plans-banner {
+    gap: 2rem;
+    height: 6.6rem;
+    &__info {
+      font-size: 1.8rem;
+    }
+
+    & .btn {
+      font-size: 1.7rem;
+    }
+
+    & .badge {
+      font-size: 1.3rem;
+    }
+  }
+}

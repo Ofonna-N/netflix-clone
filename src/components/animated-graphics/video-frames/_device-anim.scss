@@ -1,0 +1,54 @@
+.device-anim {
+  position: relative;
+  width: 100%;
+
+  &__img {
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    // visibility: hidden;
+    // overflow: hidden;
+    // position: absolute;
+  }
+
+  &--tv {
+    margin-top: -2rem;
+    .device-anim__vid-container {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-53%);
+    }
+
+    .device-anim__vid {
+      // position: absolute;
+      // position: relative;
+      width: 74%;
+      margin-inline: 13%;
+      // transform: translateY(55px) translateX(60px);
+      // height: 60%;
+      // top: 1px;
+      // z-index: 100000;
+    }
+  }
+
+  &--devices {
+    margin-top: 1rem;
+    .device-anim__vid-container {
+      position: absolute;
+      width: 100%;
+      top: 35%;
+      transform: translateY(-53%);
+    }
+    .device-anim__vid {
+      // position: absolute;
+      // position: relative;
+      width: 64%;
+      margin-inline: 18%;
+      // transform: translateY(55px) translateX(60px);
+      // height: 60%;
+      // top: 1px;
+      // z-index: 100000;
+    }
+  }
+}

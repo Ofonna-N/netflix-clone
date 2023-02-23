@@ -1,0 +1,247 @@
+.hero {
+  position: relative;
+  min-height: 50.5rem;
+  height: 50.5rem;
+  overflow: hidden;
+  border-bottom: 0.8rem solid #222;
+  &__img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    z-index: -1;
+
+    // opacity: 0;
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: -27rem 0;
+      //   width: 100%;
+    }
+  }
+
+  &__img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    // background-color: green;
+    background: linear-gradient(180deg, black 5%, transparent 40%),
+      linear-gradient(180deg, transparent 60%, rgb(0, 0, 0));
+  }
+  &__img::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.356);
+    // background: linear-gradient(180deg, black 5%, transparent 40%),
+    //   linear-gradient(180deg, transparent 60%, rgb(0, 0, 0));
+  }
+
+  &__header {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-inline: 2rem;
+    position: relative;
+    margin-inline: auto;
+    height: 4.5rem;
+  }
+
+  &__logo {
+    width: 8.8rem;
+    height: 2.4rem;
+    // margin: 10rem;
+  }
+
+  &__card {
+    padding: 1.5rem 1rem;
+    margin: 0 auto;
+    max-width: 92.6rem;
+    margin-top: 5rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.6rem;
+      font-weight: 500;
+    }
+    h3 {
+      font-weight: normal;
+      font-size: 1.8rem;
+      margin-bottom: 1.6rem;
+      margin-inline: auto;
+    }
+    .get-started-form {
+      // gap: 1.2rem;
+      // &__input-container {
+      //   width: 90%;
+      // }
+      &__title {
+        max-width: 45rem;
+        padding-inline: 5%;
+        font-size: 1.8rem;
+        // font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .hero {
+    height: 53.1rem;
+
+    &__card {
+      h1 {
+        padding-inline: 4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .hero {
+    &__card {
+      padding: 1rem;
+      .hero__form-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__header {
+      .btn {
+        padding: 0.7rem 0.8rem;
+        font-size: 1.44rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .hero {
+    height: 75.2rem;
+    &__header {
+      .btn {
+        padding: 1.6rem 1.7rem;
+        font-size: 1.6rem;
+      }
+    }
+    &__logo {
+      width: 10.8rem;
+      height: 3.2rem;
+    }
+
+    &__img::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      // background-color: green;
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.719) 5%,
+          transparent 40%
+        ),
+        linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.658));
+    }
+
+    &__card {
+      margin-top: 11rem;
+      padding: 1rem;
+      h1 {
+        font-size: 5rem;
+      }
+      h3 {
+        font-size: 2.6rem;
+      }
+      .hero__form-title {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    &__card {
+      padding-inline: 9rem;
+      .hero__form-title {
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 890px) {
+  .hero {
+    height: 72.1rem;
+    &__card {
+      padding-inline: 12rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    &__card {
+      padding-inline: 12rem;
+      // .get-started-form__title {
+      //   min-width: 70rem;
+      //   font-size: 1.9rem;
+      // }
+    }
+
+    &__img {
+      img {
+        object-position: -7rem 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    // height: 69.2rem;
+    &__img {
+      img {
+        object-position: 0 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1450px) {
+  .hero {
+    &__card {
+      margin-top: 17rem;
+      padding-inline: 6rem;
+      h1 {
+        font-size: 6.4rem;
+      }
+    }
+
+    &__header {
+      padding-inline: 7rem;
+    }
+
+    &__logo {
+      width: 16.7rem;
+      height: 4.5rem;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use "/src/sass/abstracts/abstractsEntryPoint" as entry;
+.di-graphic {
+  position: relative;
+  // flex-shrink: 3;
+  .di-graphic__download {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 0.75rem;
+    background-color: black;
+    padding: 0.5rem;
+    // gap: 0rem;
+    width: 60%;
+    min-width: 24rem;
+    position: absolute;
+    bottom: 8%;
+    right: 50%;
+    transform: translateX(50%);
+    // margin-inline: auto;
+    .di-graphic__text-grp {
+      flex-grow: 2;
+      //   justify-self: start;
+      text-align: left;
+      padding-left: 1rem;
+    }
+
+    .di-graphic__title {
+      font-size: 1.4rem;
+      white-space: nowrap;
+      display: block;
+      font-weight: bold;
+    }
+
+    .di-graphic__subtxt {
+      display: block;
+      font-size: 1.2rem;
+      color: entry.$accent-color;
+    }
+
+    .di-graphic__img {
+      width: 3.4rem;
+    }
+
+    .di-graphic__gif {
+      width: 4.8rem;
+    }
+  }
+}
