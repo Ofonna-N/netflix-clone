@@ -1,13 +1,14 @@
-import PlansBanner from "../components/plans/plans-banner/plans-banner";
-import Hero from "../components/hero/hero";
-import MediaSection from "../components/sections/media section/media-section";
-import DeviceAnim from "../components/animated-graphics/video-frames/device-anim";
-import DownloadingGraphic from "../components/animated-graphics/downloading-graphic/downloading-graph";
-import Faq from "../components/sections/faq section/faq";
-import Footer from "../components/footer/footer";
+import "./_home-page.scss";
+import PlansBanner from "../../components/plans/plans-banner/plans-banner";
+import Hero from "../../components/hero/hero";
+import MediaSection from "../../components/sections/media section/media-section";
+import DeviceAnim from "../../components/animated-graphics/video-frames/device-anim";
+import DownloadingGraphic from "../../components/animated-graphics/downloading-graphic/downloading-graph";
+import Faq from "../../components/sections/faq section/faq";
+import Footer from "../../components/footer/footer";
 function HomePage() {
   return (
-    <>
+    <div className="home-page">
       <PlansBanner />
       <main>
         <Hero />
@@ -60,8 +61,8 @@ function HomePage() {
         />
         <Faq />
       </main>
-      <Footer />
-    </>
+      <Footer isMinimized={false} />
+    </div>
   );
 }
 

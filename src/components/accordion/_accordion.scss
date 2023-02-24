@@ -28,7 +28,7 @@
     height: 2.5rem;
     position: relative;
     display: inline-block;
-    transition: all 0.3s;
+    transition: all 0.1s;
     transform: rotate(90deg);
   }
 
@@ -67,7 +67,7 @@
     max-height: 0;
     overflow: hidden;
     white-space: pre-line;
-    transition: max-height 0.25s ease;
+    transition: all 0.25s ease;
   }
 
   &__content > div {

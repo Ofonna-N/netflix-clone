@@ -11,7 +11,7 @@
     // top: 0;
     // right: 0;
     // left: 0;
-    z-index: -1;
+    z-index: 1;
 
     // opacity: 0;
     img {
@@ -47,23 +47,23 @@
     //   linear-gradient(180deg, transparent 60%, rgb(0, 0, 0));
   }
 
-  &__header {
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    padding-inline: 2rem;
-    position: relative;
-    margin-inline: auto;
-    height: 4.5rem;
-  }
+  // &__header {
+  //   z-index: 1;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   margin-top: 2rem;
+  //   padding-top: 2rem;
+  //   padding-inline: 2rem;
+  //   position: relative;
+  //   margin-inline: auto;
+  //   height: 4.5rem;
+  // }
 
-  &__logo {
-    width: 8.8rem;
-    height: 2.4rem;
-    // margin: 10rem;
-  }
+  // &__logo {
+  //   width: 8.8rem;
+  //   height: 2.4rem;
+  //   // margin: 10rem;
+  // }
 
   &__card {
     padding: 1.5rem 1rem;
@@ -71,7 +71,8 @@
     max-width: 92.6rem;
     margin-top: 5rem;
     text-align: center;
-
+    position: relative;
+    z-index: 2;
     h1 {
       font-size: 2.8rem;
       margin-bottom: 1.6rem;
@@ -119,28 +120,28 @@
       }
     }
 
-    &__header {
-      .btn {
-        padding: 0.7rem 0.8rem;
-        font-size: 1.44rem;
-      }
-    }
+    // &__header {
+    //   .btn {
+    //     padding: 0.7rem 0.8rem;
+    //     font-size: 1.44rem;
+    //   }
+    // }
   }
 }
 
 @media (min-width: 550px) {
   .hero {
     height: 75.2rem;
-    &__header {
-      .btn {
-        padding: 1.6rem 1.7rem;
-        font-size: 1.6rem;
-      }
-    }
-    &__logo {
-      width: 10.8rem;
-      height: 3.2rem;
-    }
+    // &__header {
+    //   .btn {
+    //     padding: 1.6rem 1.7rem;
+    //     font-size: 1.6rem;
+    //   }
+    // }
+    // &__logo {
+    //   width: 10.8rem;
+    //   height: 3.2rem;
+    // }
 
     &__img::after {
       content: "";
@@ -207,7 +208,8 @@
 
     &__img {
       img {
-        object-position: -7rem 0;
+        object-position: 0 0;
+        width: 100%;
       }
     }
   }
@@ -235,13 +237,13 @@
       }
     }
 
-    &__header {
-      padding-inline: 7rem;
-    }
+    // &__header {
+    //   padding-inline: 7rem;
+    // }
 
-    &__logo {
-      width: 16.7rem;
-      height: 4.5rem;
-    }
+    // &__logo {
+    //   width: 16.7rem;
+    //   height: 4.5rem;
+    // }
   }
 }

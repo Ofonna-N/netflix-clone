@@ -25,6 +25,13 @@
   &--primary {
     background-color: v.$primary-color;
   }
+
+  &--transparent {
+    background-color: transparent;
+    color: v.$accent2-color;
+    font-weight: bold;
+  }
+
   &--link {
     background-color: transparent;
     color: v.$accent-color;

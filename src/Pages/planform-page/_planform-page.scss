@@ -1,0 +1,185 @@
+@use "/src/sass/abstracts/abstractsEntryPoint" as e;
+
+@mixin table_row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin table_feature-cell {
+  width: 100%;
+  text-align: center;
+  padding: 1.6rem 0.8rem 0.4rem;
+  @media (min-width: 768px) {
+    width: 40%;
+    padding: 1.2rem 1.6rem;
+  }
+}
+
+@mixin table_value-cell {
+  width: 33%;
+  padding: 0.8rem;
+  text-align: center;
+  @media (min-width: 768px) {
+    width: 20%;
+  }
+}
+
+.planform-page {
+  background-color: white;
+  color: e.$accent2-color;
+  padding: 2rem 3rem 16rem;
+  max-width: 97.8rem;
+  margin-inline: auto;
+  .planform-page__pitch {
+    .tick-list__list-item {
+      margin-bottom: 0;
+    }
+    .planform-page__title {
+      font-size: 3.2rem;
+      font-weight: 500;
+    }
+  }
+
+  .planform {
+    &__table {
+      color: e.$accent2-color;
+      width: 100%;
+      margin-bottom: 2rem;
+      .planform__row {
+        @include table_row;
+        color: rgba(e.$accent2-color, 0.7);
+
+        .planform__feature-cell {
+          @include table_feature-cell;
+          font-size: 1.3rem;
+          color: black;
+          // font-weight: 500;
+
+          // @include table_feature-cell;
+          // color: rebeccapurple;
+        }
+
+        .planform__head-value-cell {
+          @include table_value-cell;
+          // height: 7.5rem;
+          // position: relative;
+          .planform__plan-btn {
+            position: relative;
+            color: white;
+            font-weight: bold;
+            border: 0;
+            background-color: rgba(e.$primary-color, 0.5);
+            height: 7.5rem;
+            width: 100%;
+            font-size: 1.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 0.9rem;
+            margin-inline: auto;
+            cursor: pointer;
+          }
+          .planform__plan-btn.selected {
+            background-color: e.$primary-color;
+          }
+        }
+
+        .planform__value-cell {
+          @include table_value-cell;
+          font-size: 1.6rem;
+          font-weight: 500;
+          // @include table_value-cell;
+        }
+
+        .planform__value-cell.selected {
+          color: e.$primary-color;
+          .tick-icon {
+            fill: e.$primary-color;
+          }
+        }
+      }
+
+      .planform__row:last-child {
+        border-bottom: none;
+      }
+      tbody {
+        .planform__row {
+          border-bottom: 1px solid rgba(e.$accent2-color, 0.3);
+        }
+      }
+
+      .planform__plan-btn.selected::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+
+        border-width: 10px;
+        border-style: solid;
+        border-color: e.$primary-color transparent transparent transparent;
+      }
+    }
+
+    &__info {
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 2rem;
+      .planform__restriction {
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: rgba(e.$accent2-color, 0.1);
+      }
+    }
+
+    &__btn {
+      max-width: 44rem;
+      margin-inline: auto;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .planform-page {
+    .planform {
+      &__table {
+        .planform__row {
+          .planform__head-value-cell {
+            .planform__plan-btn {
+              // background-color: pink;
+              width: 9rem;
+              height: 9rem;
+            }
+          }
+
+          .planform__feature-cell {
+            font-size: 1.6rem;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .planform-page {
+    .planform {
+      &__table {
+        .planform__row {
+          .planform__head-value-cell {
+            .planform__plan-btn {
+              // background-color: pink;
+              width: 12rem;
+              height: 12rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

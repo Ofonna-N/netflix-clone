@@ -1,0 +1,25 @@
+@use "/src/sass/abstracts/abstractsEntryPoint" as e;
+.registration-page {
+  color: e.$accent2-color;
+  .registration-container {
+    // position: relative;
+    padding: 2rem 3.2rem 6rem;
+    // z-index: 1;
+
+    &__icon-container {
+      background-image: url("https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Devices.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 26rem;
+      height: 9rem;
+      //   z-index: 100;
+    }
+
+    &__title {
+      font-weight: 500;
+    }
+
+    &__text {
+    }
+  }
+}

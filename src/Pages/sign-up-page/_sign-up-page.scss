@@ -1,0 +1,100 @@
+@use "/src/sass/abstracts/abstractsEntryPoint" as e;
+
+.sign-up-page {
+  background-color: white;
+  color: e.$accent2-color;
+  // .basic-header {
+
+  // }
+
+  .sign-up {
+    // position: relative;
+    margin-block: 2rem 6rem;
+    margin-inline: auto;
+    padding-bottom: 12rem;
+    max-width: 34rem;
+
+    &__icon-container {
+      margin-block: 30% 2rem;
+    }
+
+    &__icon {
+      height: 50px;
+      width: 50px;
+      background-size: contain;
+      display: inline-block;
+      background-image: url("https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Checkmark.png");
+      // background-color: red;
+    }
+
+    &__title {
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+    }
+
+    // &__list {
+    //   list-style: none;
+    //   padding-block: 1.5rem 2rem;
+    //   // display: flex;
+    //   // flex-direction: column;
+    // }
+  }
+}
+
+@media (min-width: 768px) {
+  .sign-up-page {
+    .basic-header {
+      height: 7.5rem;
+      &__logo {
+        width: 16.7rem;
+        height: 4.5rem;
+      }
+
+      .btn {
+        font-size: 1.9rem;
+        font-weight: 500;
+      }
+    }
+
+    .sign-up {
+      &__icon-container {
+        text-align: center;
+      }
+      .steps-txt {
+        text-align: center;
+      }
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .sign-up-page {
+    .basic-header {
+      height: 9rem;
+      // &__logo {
+      //   width: 16.7rem;
+      //   height: 4.5rem;
+      // }
+
+      // .btn {
+      //   font-size: 1.9rem;
+      //   font-weight: 500;
+      // }
+    }
+
+    .sign-up {
+      &__icon-container {
+        text-align: center;
+      }
+      .steps-txt {
+        text-align: center;
+      }
+      &__title {
+        text-align: center;
+      }
+    }
+  }
+}

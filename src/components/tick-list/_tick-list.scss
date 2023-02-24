@@ -1,0 +1,11 @@
+.tick-list {
+  list-style: none;
+  padding-block: 1.5rem 2rem;
+  // display: flex;
+  // flex-direction: column;
+
+  &__list-item {
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+}
