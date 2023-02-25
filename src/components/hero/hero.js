@@ -1,6 +1,5 @@
 import "./_hero.scss";
 
-import NetflixLogo from "../icons/netflix-logo";
 import Button from "../button/button";
 import GetStartedForm from "../get-started-form/get-started-form";
 import BasicHeader from "../header/basicHeader/basic-header";
@@ -18,7 +17,10 @@ function Hero() {
         <NetflixLogo className={"hero__logo"} fill={"#e50914"} />
         <Button content={"sign in"} modifiers={"btn--primary"} />
       </div> */}
-      <BasicHeader btn_txt={"sign in"} btn_modifiers={"btn--primary"} />
+      <BasicHeader
+        btn={<Button content={"sign in"} modifiers={"btn--primary"} />}
+      />
+
       <div className="hero__card">
         <h1>Unlimited movies, TV shows, and more.</h1>
         <h3>Watch anywhere. Cancel anytime.</h3>

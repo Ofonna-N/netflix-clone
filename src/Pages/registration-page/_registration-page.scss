@@ -4,6 +4,9 @@
   .registration-container {
     // position: relative;
     padding: 2rem 3.2rem 6rem;
+    margin-bottom: 12rem;
+    margin-inline: auto;
+    max-width: 40rem;
     // z-index: 1;
 
     &__icon-container {
@@ -12,14 +15,28 @@
       background-repeat: no-repeat;
       width: 26rem;
       height: 9rem;
+      margin-top: 30%;
+      margin-bottom: 2rem;
       //   z-index: 100;
     }
 
     &__title {
       font-weight: 500;
+      margin-bottom: 1.3rem;
     }
 
     &__text {
+      margin-bottom: 3rem;
+      max-width: 30rem;
+    }
+  }
+}
+
+@media (min-width: 740px) {
+  .registration-container {
+    text-align: center;
+    &__icon-container {
+      margin-inline: auto;
     }
   }
 }

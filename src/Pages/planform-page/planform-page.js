@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../../components/button/button";
 import NextButton from "../../components/button/next-button/next-btn";
 import Footer from "../../components/footer/footer";
 import BasicHeader from "../../components/header/basicHeader/basic-header";
@@ -34,9 +35,8 @@ function PlanFormPage() {
   return (
     <>
       <BasicHeader
-        btn_txt={"sign in"}
-        btn_modifiers={"btn--transparent"}
         modifiers="basic-header--white"
+        btn={<Button content={"sign in"} modifiers={"btn--transparent"} />}
       />
       <div className="planform-page">
         <div className="planform-page__pitch">

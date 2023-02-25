@@ -1,7 +1,8 @@
 import NextButton from "../../components/button/next-button/next-btn";
+import Footer from "../../components/footer/footer";
 import BasicHeader from "../../components/header/basicHeader/basic-header";
 import StepsText from "../../components/step-text/stepsText";
-import "./_registration.scss";
+import "./_registration-page.scss";
 
 function RegistrationPage() {
   return (
@@ -25,6 +26,8 @@ function RegistrationPage() {
           <NextButton />
         </div>
       </div>
+
+      <Footer isMinimized={true} modifiers="footer--white" />
     </>
   );
 }
