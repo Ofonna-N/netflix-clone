@@ -1,0 +1,76 @@
+@use "/src/sass/abstracts/abstractsEntryPoint" as e;
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.6rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  transition: background-color 1s;
+  // background-color: black;
+  &__logo {
+    width: 5.5rem;
+    cursor: pointer;
+  }
+
+  &__profile-icon {
+    display: inline-block;
+    width: 3.2rem;
+    cursor: pointer;
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+  &.scrolled {
+    background-color: e.$accent3-color;
+  }
+}
+
+// @media (min-width: 500px) {
+//   .login-header {
+//     &__profile-icon {
+//       width: 3.2rem;
+//       height: 4rem;
+//     }
+//   }
+// }
+
+@media (min-width: 550px) {
+  .login-header {
+    // padding-inline: 5rem;
+    &__profile-icon {
+      width: 3.2rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .login-header {
+    padding: 3rem 4.6rem 0;
+    &__logo {
+      width: 16.7rem;
+      height: 4.5rem;
+    }
+
+    &__profile-icon {
+      width: 4.2rem;
+      // height: 4rem;
+    }
+  }
+}
+
+// @media (min-width: 1450px) {
+//   .login-header {
+//     &__logo {
+//       width: 16.7rem;
+//       height: 4.5rem;
+//     }
+//     &__profile-icon {
+//       width: 6.2rem;
+//       // height: 4rem;
+//     }
+//   }
+// }

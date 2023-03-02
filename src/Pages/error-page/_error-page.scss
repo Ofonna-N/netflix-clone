@@ -1,0 +1,16 @@
+@use "/src/sass/abstracts/abstractsEntryPoint" as e;
+
+.error-page {
+  color: e.$accent2-color;
+  position: relative;
+  z-index: 100;
+
+  &__card {
+    margin-top: 10rem;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

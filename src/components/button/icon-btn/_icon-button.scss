@@ -1,0 +1,25 @@
+@use "/src/sass/abstracts/abstractsEntryPoint" as e;
+.icon-btn {
+  padding: 0.2rem 0.7rem;
+  //   background-color: aqua;
+  font-size: 1rem;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  &__text {
+    margin-left: 0.3rem;
+  }
+
+  &--white {
+    color: black;
+    background-color: white;
+  }
+
+  &--light-grey {
+    color: white;
+    background-color: rgba(94, 94, 94, 0.925);
+  }
+}

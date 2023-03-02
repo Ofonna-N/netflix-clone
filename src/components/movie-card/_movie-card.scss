@@ -1,0 +1,26 @@
+.movie-card {
+  &__wrapper {
+    // height: 10rem;
+    width: 18rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .movie-card {
+    &__wrapper {
+      width: 15.3rem;
+      height: 8.5rem;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .movie-card {
+    &__wrapper {
+      width: 22.4rem;
+      height: 12.6rem;
+    }
+  }
+}

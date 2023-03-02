@@ -25,7 +25,7 @@ function PlanFormPage() {
   ];
   const tick_fill = "rgba(51, 51, 51, 0.7)";
 
-  const [plan, setPlan] = useState("");
+  const [plan, setPlan] = useState(premium);
 
   const setPlanHandler = function (p) {
     // console.log(p);
@@ -34,10 +34,6 @@ function PlanFormPage() {
 
   return (
     <>
-      <BasicHeader
-        modifiers="basic-header--white"
-        btn={<Button content={"sign in"} modifiers={"btn--transparent"} />}
-      />
       <div className="planform-page">
         <div className="planform-page__pitch">
           <StepsText current={1} max={3} />
@@ -163,11 +159,10 @@ function PlanFormPage() {
           </div>
 
           <div className="planform__btn">
-            <NextButton />
+            <NextButton navPage={"../registration"} />
           </div>
         </div>
       </div>
-      <Footer isMinimized={true} modifiers="footer--white" />
     </>
   );
 }

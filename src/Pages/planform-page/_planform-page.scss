@@ -27,6 +27,7 @@
 }
 
 .planform-page {
+  @extend .signup__outlet;
   background-color: white;
   color: e.$accent2-color;
   padding: 2rem 3rem 16rem;

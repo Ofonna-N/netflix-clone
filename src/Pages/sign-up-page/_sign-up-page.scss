@@ -9,6 +9,7 @@
 
   .sign-up {
     // position: relative;
+    @extend .signup__outlet;
     margin-block: 2rem 6rem;
     margin-inline: auto;
     padding-bottom: 12rem;

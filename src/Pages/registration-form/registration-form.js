@@ -9,11 +9,6 @@ import "./_registration-form.scss";
 function RegistrationForm() {
   return (
     <>
-      <BasicHeader
-        modifiers="basic-header--white"
-        btn={<Button content={"sign in"} modifiers={"btn--transparent"} />}
-      />
-
       <div className="registration-form">
         <div className="registration-form__head">
           <StepsText current={2} max={3} />
@@ -33,8 +28,6 @@ function RegistrationForm() {
         </form>
         <NextButton />
       </div>
-
-      <Footer modifiers={"footer--white"} isMinimized={true} />
     </>
   );
 }

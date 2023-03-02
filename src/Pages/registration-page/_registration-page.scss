@@ -1,6 +1,7 @@
 @use "/src/sass/abstracts/abstractsEntryPoint" as e;
 .registration-page {
   color: e.$accent2-color;
+  @extend .signup__outlet;
   .registration-container {
     // position: relative;
     padding: 2rem 3.2rem 6rem;

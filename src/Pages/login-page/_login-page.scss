@@ -137,21 +137,21 @@
     .login-form {
       padding: 5rem 6.8rem 2rem;
     }
-  }
 
-  .footer.footer--white {
-    border: none;
-    background-color: rgba(0, 0, 0, 0.9);
-    .footer__links {
-      a {
-        // color: $font-color;
-        //   color: rgba(e.$accent2-color, 0.5);
-        color: #8c8c8c;
-        font-weight: lighter;
+    .footer.footer--white {
+      border: none;
+      background-color: rgba(0, 0, 0, 0.9);
+      .footer__links {
+        a {
+          // color: $font-color;
+          //   color: rgba(e.$accent2-color, 0.5);
+          color: #8c8c8c;
+          font-weight: lighter;
+        }
       }
-    }
-    .footer__header {
-      color: #8c8c8c;
+      .footer__header {
+        color: #8c8c8c;
+      }
     }
   }
 }

@@ -1,23 +1,25 @@
 import "./_button.scss";
 import ChevRight from "../icons/chev-right";
+import { Link } from "react-router-dom";
 
-function Button({ content, modifiers, hasIcon }) {
-  // let btn_block = styles["button"];
+function Button({ content, modifiers, hasIcon, navPage }) {
+  const getButton = function () {
+    return !navPage ? (
+      <button className={`btn ${modifiers}`}>
+        {content}
+        {/* <img className={`${styles["button__img"]}`} src={chev}></img> */}
+        {hasIcon && <ChevRight fill="white" className="btn__icon" />}
+      </button>
+    ) : (
+      <Link to={navPage} className={`btn ${modifiers}`}>
+        {content}
+        {/* <img className={`${styles["button__img"]}`} src={chev}></img> */}
+        {hasIcon && <ChevRight fill="white" className="btn__icon" />}
+      </Link>
+    );
+  };
 
-  // let btn_classes = modifiers.reduce(
-  //   (acc, cur) => acc + " " + styles[cur],
-  //   btn_block
-  // );
-  // console.log(btn_classes);
-
-  return (
-    // <button className={`${styles["button"]} ${styles["button--link"]}`}>
-    <button className={`btn ${modifiers}`}>
-      {content}
-      {/* <img className={`${styles["button__img"]}`} src={chev}></img> */}
-      {hasIcon && <ChevRight fill="white" className="btn__icon" />}
-    </button>
-  );
+  return getButton();
 }
 
 export default Button;

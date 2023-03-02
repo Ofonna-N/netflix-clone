@@ -1,5 +1,6 @@
 @use "/src/sass/abstracts/abstractsEntryPoint" as e;
 .registration-form {
+  @extend .signup__outlet;
   color: e.$accent2-color;
   padding: 4rem 3rem 16rem;
   max-width: 50rem;
@@ -20,6 +21,7 @@
   form {
     .text-input {
       margin-bottom: 3rem;
+      border: 1px solid rgba(e.$accent2-color, 0.7);
     }
   }
 }

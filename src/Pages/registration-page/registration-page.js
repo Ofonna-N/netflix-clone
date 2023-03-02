@@ -7,11 +7,6 @@ import "./_registration-page.scss";
 function RegistrationPage() {
   return (
     <>
-      <BasicHeader
-        btn_txt={"sign in"}
-        btn_modifiers={"btn--transparent"}
-        modifiers="basic-header--white"
-      />
       <div className="registration-page">
         <div className="registration-container">
           <div className="registration-container__icon-container"></div>
@@ -23,11 +18,9 @@ function RegistrationPage() {
             Netflix is personalized for you. Create a password to watch on any
             device at any time.
           </div>
-          <NextButton />
+          <NextButton navPage={"../regform"} />
         </div>
       </div>
-
-      <Footer isMinimized={true} modifiers="footer--white" />
     </>
   );
 }

@@ -13,11 +13,11 @@ function SignUp() {
   ];
   return (
     <>
-      <BasicHeader
+      {/* <BasicHeader
         btn_txt={"sign in"}
         btn_modifiers={"btn--transparent"}
         modifiers="basic-header--white"
-      />
+      /> */}
       <div className="sign-up-page">
         <main className="sign-up">
           <div className="sign-up__icon-container">
@@ -26,10 +26,10 @@ function SignUp() {
           <StepsText current={1} max={3} />
           <h1 className="sign-up__title">Choose your plan</h1>
           <TickList listItems={list} />
-          <NextButton />
+          <NextButton navPage={"planform"} />
         </main>
       </div>
-      <Footer isMinimized={true} modifiers="footer--white" />
+      {/* <Footer isMinimized={true} modifiers="footer--white" /> */}
     </>
   );
 }

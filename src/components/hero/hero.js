@@ -18,7 +18,13 @@ function Hero() {
         <Button content={"sign in"} modifiers={"btn--primary"} />
       </div> */}
       <BasicHeader
-        btn={<Button content={"sign in"} modifiers={"btn--primary"} />}
+        btn={
+          <Button
+            content={"sign in"}
+            modifiers={"btn--primary"}
+            navPage={"/login"}
+          />
+        }
       />
 
       <div className="hero__card">

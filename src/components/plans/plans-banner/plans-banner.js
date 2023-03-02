@@ -10,7 +10,12 @@ function PlansBanner() {
       <span className={"plans-banner__info"}>
         Plans now start at <span className={"plans-banner__price"}>$6.99</span>.
       </span>
-      <Button content={"Learn More"} modifiers={"btn--link"} hasIcon={true} />
+      <Button
+        content={"Learn More"}
+        modifiers={"btn--link"}
+        hasIcon={true}
+        navPage={"signup"}
+      />
     </div>
   );
 }
