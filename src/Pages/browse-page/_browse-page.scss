@@ -2,10 +2,13 @@
 
 .browse-page {
   background-color: e.$accent3-color;
+  max-width: 100%;
+  overflow-x: hidden;
+  // overflow: hidden;
   // width: 100%;
   // position: relative;
   // height: 100vh;
-  // padding: 1rem 1rem 0 1rem;
+  // padding: 1rem 2rem 0;
 
   &__movies {
     position: relative;
@@ -15,9 +18,12 @@
     // transform: translateY(-3rem);
     // top: 50%;
     z-index: 10;
+    border: 1px red;
   }
 }
-
+// * {
+//   outline: 1px solid #f00 !important;
+// }
 @media (min-width: 1400px) {
   .browse-page {
     &__movies {

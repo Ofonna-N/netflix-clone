@@ -1,26 +1,23 @@
 .movie-card {
-  &__wrapper {
-    // height: 10rem;
-    width: 18rem;
-    img {
-      width: 100%;
-    }
+  width: 18rem;
+  scroll-snap-align: center;
+  // background-color: aqua;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    object-fit: cover;
   }
 }
 
 @media (min-width: 500px) {
   .movie-card {
-    &__wrapper {
-      width: 15.3rem;
-      height: 8.5rem;
-    }
+    width: 15.3rem;
+    height: 8.5rem;
   }
 }
 @media (min-width: 768px) {
   .movie-card {
-    &__wrapper {
-      width: 22.4rem;
-      height: 12.6rem;
-    }
+    width: 22.4rem;
+    height: 12.6rem;
   }
 }

@@ -1,7 +1,11 @@
 .movies-row {
   //   height: 10.17rem;
-  max-height: 10rem;
+  // max-height: 10rem;
+  // width: 100%;
+  //overflow-x: hidden;
   margin-bottom: 4rem;
+  position: relative;
+  z-index: 50000;
   // background-color: aqua;
 
   &__title {
@@ -9,16 +13,55 @@
     padding-inline: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    text-transform: capitalize;
   }
 
   &__container {
-    padding-inline: 1.5rem;
+    padding: 1rem 1.5rem;
     display: flex;
-    gap: 3px;
+    gap: 5px;
     // width: 100%;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
+    touch-action: pan-x;
+    scroll-snap-type: inline mandatory;
     // background-color: azure;
+
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+  }
+
+  &__btns {
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(calc(-50% + 0.8rem));
+    left: 0;
+    height: 86%;
+    width: 100%;
+    pointer-events: none;
+
+    // background-color: aquamarine;
+
+    button {
+      padding: 1rem;
+      border: 0;
+      font-size: 3.5rem;
+      color: white;
+      //pointer-events: all;
+      background-color: rgba(0, 0, 0, 0.89);
+      cursor: pointer;
+      pointer-events: all;
+      opacity: 0.5;
+      transition: opacity 0.5s;
+      // border-radius: 5px;
+    }
+
+    button:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -30,7 +73,10 @@
 
 @media (min-width: 890px) {
   .movies-row {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+    &__title {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -39,7 +85,11 @@
     // margin-bottom: 10rem;
 
     &__title {
-      font-size: 1.3rem;
+      font-size: 1.8rem;
+    }
+
+    &__btns {
+      display: flex;
     }
   }
 }

@@ -1,0 +1,124 @@
+.scroller {
+  position: relative;
+  margin-bottom: 2rem;
+
+  &__title {
+    font-size: 2rem;
+    padding-left: 2rem;
+  }
+
+  &__group {
+    position: relative;
+    height: max-content;
+    min-height: 10rem;
+    // background-color: green;
+  }
+
+  &__panel {
+    position: relative;
+    padding-inline: 2rem;
+
+    display: flex;
+    flex-shrink: 0;
+    gap: 1rem;
+    // background-color: chocolate;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: inline mandatory;
+
+    justify-content: center;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__btns {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    // background-color: antiquewhite;
+    // border: 2px green;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      position: relative;
+      padding: 0 1rem;
+      z-index: 10;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.925);
+      color: white;
+      border: 0;
+      font-size: 2.5rem;
+      opacity: 0.25;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 1;
+    }
+  }
+  &__item {
+    // padding: 1rem;
+    background-color: rgba(0, 0, 0, 1);
+    scroll-snap-align: end;
+    cursor: pointer;
+
+    &-img {
+      height: 10rem;
+      width: 18rem;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .scroller {
+    &__item {
+      scroll-snap-align: center;
+    }
+  }
+}
+@media (min-width: 890px) {
+  .scroller {
+    // margin-bottom: 4rem;
+    &__title {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .scroller {
+    // margin-bottom: 10rem;
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__btns {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .scroller {
+    // margin-bottom: 10rem;
+
+    &__title {
+      font-size: 1.7rem;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .scroller {
+    // margin-bottom: 10rem;
+
+    &__title {
+      font-size: 2rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
