@@ -1,10 +1,25 @@
 import "./_get-started-form.scss";
 import Button from "../button/button";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../redux-store/userSlice";
 
 function GetStartedForm() {
   const inputRef = useRef();
   const [hasText, setHasText] = useState(false);
+  const nav = useNavigate();
+  const dispatch = useDispatch();
+
+  const setEmailHandler = (e) => {
+    e.preventDefault();
+
+    if (hasText) {
+      dispatch(setUser({ email: inputRef.current.value }));
+    }
+
+    nav("signup/regform");
+  };
 
   return (
     <form className="get-started-form">
@@ -17,6 +32,9 @@ function GetStartedForm() {
             ref={inputRef}
             className={`get-started-form__input ${hasText ? "has-text" : ""}`}
             typeof="email"
+            onChange={() => {
+              setHasText(inputRef.current.value.trim().length > 0);
+            }}
             onMouseLeave={() => {
               setHasText(inputRef.current.value.trim().length > 0);
             }}
@@ -27,6 +45,7 @@ function GetStartedForm() {
           content={"get started"}
           modifiers="btn--primary btn--get-started"
           hasIcon={true}
+          clickEvent={setEmailHandler}
         />
       </div>
     </form>

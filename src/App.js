@@ -5,7 +5,7 @@ import PlanFormPage from "./Pages/planform-page/planform-page";
 import RegistrationPage from "./Pages/registration-page/registration-page";
 import SignUp from "./Pages/sign-up-page/sign-up-page";
 import RegistrationForm from "./Pages/registration-form/registration-form";
-import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./Pages/error-page/error-page";
 import SignUpRoot from "./Pages/sign-up-page/sign-up-root";
 import BrowsePage from "./Pages/browse-page/browse-page";
@@ -14,6 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
+
     errorElement: <ErrorPage />,
   },
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
     path: "login",
     element: <LoginPage />,
   },
+  {
+    path: "/browse",
+    element: <BrowsePage />,
+  },
 ]);
 
 const testRoute = createBrowserRouter([
@@ -53,7 +58,7 @@ const testRoute = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={testRoute} />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;

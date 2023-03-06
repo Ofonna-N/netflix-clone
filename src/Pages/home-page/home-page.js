@@ -6,7 +6,30 @@ import DeviceAnim from "../../components/animated-graphics/video-frames/device-a
 import DownloadingGraphic from "../../components/animated-graphics/downloading-graphic/downloading-graph";
 import Faq from "../../components/sections/faq section/faq";
 import Footer from "../../components/footer/footer";
+import { useEffect } from "react";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../redux-store/userSlice";
 function HomePage() {
+  const nav = useNavigate();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const auth = getAuth();
+    const unsub = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // console.log(user.email);
+        // console.log("user is already logged In");
+        dispatch(setUser({ email: user.email }));
+        nav("/browse");
+      } else {
+        console.log("user not logged in");
+      }
+    });
+    return () => unsub();
+  }, []);
+
   return (
     <div className="home-page">
       <PlansBanner />

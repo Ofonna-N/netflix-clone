@@ -7,7 +7,6 @@ function DownloadingGraphic({ img_src, title }) {
         className="di-graphic__main-img"
         src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
         alt=""
-        srcset=""
       />
       <div className="di-graphic__download">
         <img
@@ -16,7 +15,6 @@ function DownloadingGraphic({ img_src, title }) {
             "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
           }
           alt=""
-          srcset=""
         />
         <div className="di-graphic__text-grp">
           <span className="di-graphic__title">{"stranger things"}</span>
@@ -26,7 +24,6 @@ function DownloadingGraphic({ img_src, title }) {
           className="di-graphic__gif"
           src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif"
           alt=""
-          srcset=""
         />
       </div>
     </div>

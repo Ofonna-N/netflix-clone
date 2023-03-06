@@ -2,10 +2,10 @@ import "./_button.scss";
 import ChevRight from "../icons/chev-right";
 import { Link } from "react-router-dom";
 
-function Button({ content, modifiers, hasIcon, navPage }) {
+function Button({ content, modifiers, hasIcon, navPage, clickEvent }) {
   const getButton = function () {
     return !navPage ? (
-      <button className={`btn ${modifiers}`}>
+      <button className={`btn ${modifiers}`} onClick={clickEvent}>
         {content}
         {/* <img className={`${styles["button__img"]}`} src={chev}></img> */}
         {hasIcon && <ChevRight fill="white" className="btn__icon" />}

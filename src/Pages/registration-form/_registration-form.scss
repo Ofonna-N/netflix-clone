@@ -17,7 +17,12 @@
     font-size: 1.8rem;
     margin-top: 1rem;
   }
-
+  &__Error-message {
+    color: red;
+    font-size: 1.6rem;
+    transform: translateY(-2rem);
+    text-transform: capitalize;
+  }
   form {
     .text-input {
       margin-bottom: 3rem;

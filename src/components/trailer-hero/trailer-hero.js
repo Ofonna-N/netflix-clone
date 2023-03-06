@@ -25,6 +25,14 @@ function TrailerHero() {
       );
       const updateTrailer = () => {
         const randomIndex = Math.floor(Math.random() * trailers.length);
+        const trailer = trailers[randomIndex];
+
+        // console.log(
+        //   "trailer not found:" +
+        //     (trailer.backdrop_path === null ||
+        //       trailer.backdrop_path === undefined)
+        // );
+
         setTrailer(trailers[randomIndex]);
       };
       updateTrailer();
