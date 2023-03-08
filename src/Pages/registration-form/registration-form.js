@@ -70,7 +70,7 @@ function RegistrationForm() {
         <div className="registration-form__head">
           <StepsText current={2} max={3} />
           <h1 className="registration-form__title">
-            Create a password to start your membership
+            Create a password too start your membership
           </h1>
           <div className="registration-form__text-row">
             Just a few more steps and you're done!
