@@ -16,7 +16,7 @@ function LoginPage() {
   const dispatch = useDispatch();
   const nav = useNavigate();
   const userSlice = useSelector((state) => state.user);
-  console.log(userSlice);
+  // console.log(userSlice);
   useEffect(() => {
     if (userSlice.user) {
       emailRef.current.value = userSlice.user.email;

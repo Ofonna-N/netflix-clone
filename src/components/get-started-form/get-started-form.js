@@ -1,8 +1,8 @@
 import "./_get-started-form.scss";
 import Button from "../button/button";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../redux-store/userSlice";
 
 function GetStartedForm() {
@@ -10,6 +10,15 @@ function GetStartedForm() {
   const [hasText, setHasText] = useState(false);
   const nav = useNavigate();
   const dispatch = useDispatch();
+  const userSlice = useSelector((state) => state.user);
+
+  useEffect(() => {
+    // console.log(userSlice.user);
+    if (userSlice.user) {
+      inputRef.current.value = userSlice.user.email;
+      setHasText(true);
+    }
+  }, []);
 
   const setEmailHandler = (e) => {
     e.preventDefault();

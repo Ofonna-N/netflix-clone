@@ -24,7 +24,7 @@ function HomePage() {
         dispatch(setUser({ email: user.email }));
         nav("/browse");
       } else {
-        console.log("user not logged in");
+        // console.log("user not logged in");
       }
     });
     return () => unsub();

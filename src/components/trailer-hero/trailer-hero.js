@@ -8,6 +8,7 @@ const img_baseUrl = "https://image.tmdb.org/t/p/w500";
 
 function TrailerHero() {
   const [trailer, setTrailer] = useState({});
+
   const capText = (text, length) => {
     if (text === undefined) return text;
     if (text.length > length) {
@@ -15,6 +16,7 @@ function TrailerHero() {
       return result;
     }
   };
+
   useEffect(() => {
     const fetchTrailer = async () => {
       // const response = await fetch(
@@ -25,18 +27,15 @@ function TrailerHero() {
       );
       const updateTrailer = () => {
         const randomIndex = Math.floor(Math.random() * trailers.length);
-        const trailer = trailers[randomIndex];
+        const updatedTrailer = trailers[randomIndex];
 
-        // console.log(
-        //   "trailer not found:" +
-        //     (trailer.backdrop_path === null ||
-        //       trailer.backdrop_path === undefined)
-        // );
-
-        setTrailer(trailers[randomIndex]);
+        // setTimeout(() => setCanFade(false), 5000);
+        setTrailer(updatedTrailer);
       };
+
       updateTrailer();
-      console.log("init traileer");
+
+      // console.log("init traileer");
       // console.log(trailers);
       const interval = setInterval(() => {
         updateTrailer();
@@ -45,19 +44,26 @@ function TrailerHero() {
       // const data = await response.json();
       // console.log(randomIndex);
       // console.log(trailer);
-      return () => clearInterval(interval);
+      return () => {
+        clearInterval(interval);
+        console.log("dismout");
+      };
     };
 
     fetchTrailer();
   }, []);
 
   return (
-    <section className="trailer-hero">
+    <section
+      key={trailer.id}
+      className={`trailer-hero ${trailer ? "apply-fade" : ""}`}
+    >
       <div className="trailer-hero__img">
         <img
           src={
-            img_baseUrl + trailer.backdrop_path ||
-            "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeqNepoPbog4fYKeeIw14IQXSUTuKK5uIOJserRmkB42vKfVENjoaHd3rFwCG5pv3ahWIhR9hPnsG603bbY3mbtijEnxdimj-1I5.webp?r=4d6"
+            trailer.backdrop_path === undefined
+              ? "https://occ-0-1339-1340.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeqNepoPbog4fYKeeIw14IQXSUTuKK5uIOJserRmkB42vKfVENjoaHd3rFwCG5pv3ahWIhR9hPnsG603bbY3mbtijEnxdimj-1I5.webp?r=4d6"
+              : img_baseUrl + trailer.backdrop_path
           }
           alt=""
         />
