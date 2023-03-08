@@ -15,7 +15,7 @@ Overall, my use of React in this project demonstrates my understanding of creati
 </details>
 
  <details>
-  <summary> <h2> SASS </h2></summary> 
+  <summary> <h3> SASS </h3></summary> 
 I chose to use Sass for my Netflix clone project. Sass is a CSS preprocessor that enables me to write cleaner, more maintainable code.
 
 Here are some of the Sass features I used:
@@ -37,14 +37,14 @@ Variables: I used variables to define reusable values, such as colors and font s
 Overall, my use of Sass in the Netflix clone project demonstrates my understanding of the importance of writing organized, efficient CSS code. By using features like mixins, base classes, variables, @use, @forward, the 7-1 Sass pattern, nesting, and partials, I was able to create a more maintainable and scalable codebase.
 </details>
 <details>
-<summary> <h2> Vanilla JavaScript </h2> </summary> 
+<summary> <h3> Vanilla JavaScript </h3> </summary> 
 I used Vanilla JavaScript in my Netflix clone project to handle various functionalities of the application, such as handling form submissions. By using Vanilla JavaScript instead of relying on libraries or frameworks, I was able to strengthen my understanding of core JavaScript concepts and improve my ability to write clean and efficient code.
 
 In addition to using Vanilla JavaScript, I have also started exploring TypeScript, a typed superset of JavaScript that adds static typing and other features to the language. My experience with Vanilla JavaScript has given me a solid foundation for learning TypeScript and other advanced JavaScript concepts, which I plan to continue to develop as an aspiring front-end developer.
 </details>
 
 <details>
-<summary> <h2> Firebase Authentication</h2> </summary> 
+<summary> <h3> Firebase Authentication</h3> </summary> 
 I used Firebase for user authentication in my Netflix clone project. With Firebase, I was able to handle user sign-up, login, and logout functionalities easily. Firebase also provided me with the ability to check if a user is still logged in or not, making the user experience more seamless.
 
 To make testing the login feature easier for others, I created a credential that anyone can use to log in to the application without having to provide their email address. 
@@ -56,7 +56,7 @@ Firebase Authentication was a great tool to use in my project, as it enabled me 
 </details>
 
 <details>
-<summary> <h2>TMDB API Integration</h2> </summary> 
+<summary> <h3>TMDB API Integration</h3> </summary> 
 I integrated the TMDB API to fetch movie data such as title, description, and images. This allowed me to display a selection of movies for users to browse when they sign up for the application.
 
 To fetch data from the TMDB API, I used the Fetch API, which allowed me to make HTTP requests to the API and receive JSON data in response. I also had to include my API key as a query parameter in the request URL to authenticate my requests to the API.
@@ -67,7 +67,7 @@ Overall, integrating the TMDB API was a valuable learning experience that allowe
 </details>
 
 <details>
-<summary> <h2>Navigation with React Router</h2> </summary> 
+ <summary> <h3>Navigation with React Router</h3> </summary> 
 I used React Router in my Netflix clone project to enable client-side routing and enable the user to switch between different pages, such as the signup and login pages. Using React Router allowed me to mimic Netflix's navigation style and keep the user experience consistent with the original platform.
 
 One of the main benefits of using React Router was the ability to keep track of navigation history. This feature allowed users to navigate back and forth between pages, just like they would on a regular website. Additionally, I learned about the history API React Router uses and better understood the need for client-side routing.
@@ -76,7 +76,7 @@ Overall, React Router was an essential tool in the creation of my Netflix clone 
 </details>
 
 <details>
-<summary> <h2>Redux</h2> </summary> 
+<summary> <h3>Redux</h3> </summary> 
 I used Redux to manage the application's state, which allowed me to maintain a single source of truth for the data in the application. One of the main benefits of using Redux was that it enabled me to remember the user's email when navigating between different pages containing the signup form or login form, as well as the get-started call-to-action form.
 
 In the application, the user's email is an important piece of data that is required for authentication and personalization. By using Redux, I was able to store this data in a global state object, which made it easily accessible from any component in the application. This ensured that the user's email was always available and up-to-date, even when navigating between different pages.
@@ -97,5 +97,5 @@ The application uses React Router for client-side routing, enabling the user to 
 #### Movie Listings: 
 The application lists movies using the TMDB API integration, enabling users to browse a selection of movies with titles, descriptions, and images.
 
-
+<br><br>
 My Netflix clone project was an exciting and challenging experience that allowed me to showcase my skills as a front-end developer. I believe that this project demonstrates my ability to create modular and scalable web applications using React, Sass, and other front-end technologies, as well as integrate third-party APIs like TMDB. I look forward to continuing to improve upon this project and working on future projects that challenge me as a developer.
