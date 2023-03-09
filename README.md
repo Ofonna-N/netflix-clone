@@ -5,6 +5,8 @@
 https://user-images.githubusercontent.com/108894366/223868685-550dd567-7572-4dc9-ac3b-da13ad94a004.mp4
 
 [View Demo](https://netflix-clone-780a5.web.app/)
+
+>**__Note that this would trigger a security warning for phishing, so just ignore it and view to view the website, you can use the demo email and passowrd below if you dont want to create an account__**
 <br>
 Email: netflixclone@yahoo.com <br>
 pasword: netflixclone
