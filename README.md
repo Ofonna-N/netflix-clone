@@ -4,6 +4,7 @@
 
 https://user-images.githubusercontent.com/108894366/223868685-550dd567-7572-4dc9-ac3b-da13ad94a004.mp4
 
+[View Demo](https://netflix-clone-780a5.web.app/)
 <br>
 Email: netflixclone@yahoo.com <br>
 pasword: netflixclone
