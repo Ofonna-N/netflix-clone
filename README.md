@@ -110,4 +110,4 @@ The application uses React Router for client-side routing, enabling the user to 
 The application lists movies using the TMDB API integration, enabling users to browse a selection of movies with titles, descriptions, and images.
 
 <br><br>
-My Netflix clone project was an exciting and challenging experience that allowed me to showcase my skills as a front-end developer. I believe that this project demonstrates my ability to create modular and scalable web applications using React, Sass, and other front-end technologies, as well as integrate third-party APIs like TMDB. I look forward to continuing to improve upon this project and working on future projects that challenge me as a developer..
+My Netflix clone project was an exciting and challenging experience that allowed me to showcase my skills as a front-end developer. I believe that this project demonstrates my ability to create modular and scalable web applications using React, Sass, and other front-end technologies, as well as integrate third-party APIs like TMDB. I look forward to continuing to improve upon this project and working on future projects that challenge me as a developer.
